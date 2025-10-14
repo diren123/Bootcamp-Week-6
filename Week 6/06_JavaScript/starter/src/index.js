@@ -46,3 +46,38 @@ function findMovie(movieTitle) {
 findMovie("Star Wars");
 findMovie("Thor: Ragnarok"); // This will not find a match
 
+// Part 2: Function to return movie object or message
+function returnMovie(movieTitle){
+  for (const movie of movies) {
+    if (movie.title === movieTitle) {
+      return movie;
+    }
+  }
+  return `Movie titled "${movieTitle}" not found.`;
+}
+
+const movie1 = returnMovie("Jaws");
+const movie2 = returnMovie("Thor: Ragnarok");
+
+console.log("Returned movie 1:", movie1);
+console.log("Returned movie 2", movie2);
+
+console.log("Part 3");
+
+// Part 3: Function to log movie details passed as argument
+function myMovieDetails(movie) {
+  if (typeof movie === "string") {
+    console.log(movie); // This is the "not found" message
+  } else {
+    console.log("Movie Details: ");
+    console.log("Title: ", movie.title)
+    console.log("Director: ", movie.director);
+    console.log("Year: ", movie.year);
+  }
+}
+
+console.log("Part 4");
+
+// Part 4: Passing function result as argument
+myMovieDetails(returnMovie("Jaws"));
+myMovieDetails(returnMovie("Thor: Ragnarok"));
