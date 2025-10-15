@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QuickLab 13 - JavaScript and Forms - Validation</title>
+</head>
+
+<body>
+    <h2>Feedback Form</h2>
+    <form name="submission" id="submission" novalidate>
+        <table border="0">
+            <tr>
+                <td>First Name:</td>
+                <td><input id="fn" type="text" autofocus /></td>
+            </tr>
+            <tr>
+                <td>Surname:</td>
+                <td><input id="sn" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input id="email" type="email" /></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td><input name="gender" id="male" type="radio" value="m" /> Male<input name="gender" id="female" type="radio" value="f" /> Female</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" /></td>
+            </tr>
+        </table>
+    </form>
+    <script src="src/index.js"></script>
+</body>
+
+</html>
